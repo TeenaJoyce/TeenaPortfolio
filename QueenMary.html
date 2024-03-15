@@ -3,66 +3,123 @@
 <head>
 <title>B340</title>
 <link rel="stylesheet" href="css/Portfolio.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Pen+Script&family=Ruda:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Nav bar-->
-
-<div class="topnav">
-  <a href="Home.html">Portfolio</a>
-  <a href="Contact.html">Contact</a>
-  <a href="AboutMe.html">About</a>
- <a href="Resume.html">Resume</a>
-  <img src="Images/TJJ.png" alt="tjj logo" width="100" height="110" style="float:right"></a>
-</div>
-
-
-<h1>Queen Mary Cruise Liner- Room B340</h1>
-<h2>Software used: 3ds Max and Blender</h2>
-  <div class="content-wrapper">
-    <div class="image-container">
-      <img src="Portfolio/3d modeling/B340Top.jpg" alt="B340" class="Roomimage">
+							<!-- Nav bar-->
+<div class="home">
+  <div class="container">
+    <div class="topnav">
+      <a href="Home.html">Home</a>
+      <a href="Other.html">Other works</a>
     </div>
-    <div class="text-container">
-      <p> Final Group project- a 3d unity game that utilizes sounds and jump scares to creat mystery and tension. </p>
-      <p> In this project we recreated a 3d model of the Quee marys cruise liner and I was assigned to create the infamous Room B340- a room rumored to be haunted till this day.It is a basic room with 4 sections- the bedroom , bathroom, sitting room and a closet room. The pallete used is to represent isolation.</p> 
-    </div>
-  </div>
-
-
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/bedroom3.jpg" alt="bedroom top" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/bedroom2.jpg" alt="bedroom front" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/bathroom2.jpg" alt="bathroom top" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/toiletside.jpg" alt="toiletside" style="width:100%">
+    <div class="home-content">
+      <h1>Queen Mary Cruise Liner- Room B340</h1>
     </div>
   </div>
 </div>
-<div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/Sitting room2.jpg" alt="Sitting room" style="width:100%">
-    </div>
+
+
+								<!-- Text-->
+
+<div class="info" style="text-align: center;">
+      <img src="Portfolio/3d modeling/B340Top.jpg" alt="Room" style="width:700px; height:500px;">
+      <img src="Portfolio/3d modeling/B340Top2.jpg" alt="Avengers side look" style="width:700px; height:500px;">
+      <p>Software used: 3ds Max and Blender</p>
+      <p>In a digital creation inspired RMS Queen Mary's cruise liner. A 3d model of the aleged haunted room B340 came to life. The scene was modeled with the actual room as inspiration.  It was develeoped for a horror game that takes place inside a cruise ship. The color and and materiels were chosen to give an eerie feeling when all the lights were turned off since the game takes place at night.</p>
+</div>
+
+							<!-- Portfolio Gallery Slideshow -->
+
+
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="Portfolio/3d modeling/bedroom3.jpg" alt="bedroom top" style="width:100%">
   </div>
 
-</body>
-</html>
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="Portfolio/3d modeling/bedroom2.jpg" alt="bedroom front" style="width:100%">
+  </div>
 
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="Portfolio/3d modeling/bathroom2.jpg" alt="bathroom top" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="Portfolio/3d modeling/toiletside.jpg" alt="toiletside" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="Portfolio/3d modeling/Sitting room2.jpg" alt="Sitting room" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/bedroom3.jpg" alt="bedroom top" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/bedroom2.jpg" alt="bedroom front" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/bathroom2.jpg" alt="bathroom top" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/toiletside.jpg" alt="toiletside"  style="width:100%" onclick="currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/Sitting room2.jpg" alt="Sitting room" style="width:100%" onclick="currentSlide(5)">
+    </div>    
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
 </html>

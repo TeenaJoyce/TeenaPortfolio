@@ -1,37 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Luna</title>
 <link rel="stylesheet" href="css/Portfolio.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
 </head>
 <body>
 
-<!-- Nav bar-->
-<div class="topnav">
-  <a href="Home.html">Portfolio</a>
-  <a href="Contact.html">Contact</a>
-  <a href="AboutMe.html">About</a>
- <a href="Resume.html">Resume</a>
-  <img src="Images/TJJ.png" alt="tjj logo" width="100" height="110" style="float:right"></a>
+							<!-- Nav bar-->
+<div class="home">
+  <div class="container">
+    <div class="topnav">
+      <a href="Home.html">Home</a>
+      <a href="Other.html">Other works</a>
+    </div>
+  </div>
+</div>
+<body>
+
+
+
+								<!-- IMG Carousal-->
+
+<div style="text-align:center">
+  <img src="Portfolio/Grapic Design/Luna logo.png" alt="Luna logo" style="width:800px; height:300px;">
+</div>
+
+<div class="Mainimg">
+  <img src="Portfolio/Grapic Design/Luna billboard.png" alt="Luna billboard">
+
+  <p>After researching different crisp packaging, I created my own combination of flavors using major ingredients from Chinese cuisine. The logo "Luna" was designed to highlight the connection to the moon, suggesting a sense of mystery, elegance, and a nighttime snacking experience.</p>
 </div>
 
 
+<!-- Portfolio Gallery Slideshow -->
 
-<h1>Luna Crisp Packaging</h1>
-<h2>Software used: Adobe photoshop and Illustrator</h2>
-  <div class="content-wrapper">
-    <div class="image-container">
-      <img src="Portfolio/Grapic Design/Luna Mockup.jpg" alt="Luna Mockup" class="Lunaimage">
+<div class="container">
+  <div class="slides-container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="Portfolio/Grapic Design/Soy crisp mockup.png" alt="bedroom top" style="width:884px; height:600px;">
     </div>
-    <div class="text-container">
-      <p> A solo project on product packaging. Took to designing a crisp packet.  </p>
-	<p>After researching different crisp packaging, I created my own combination of flavors using major ingredients from Chinese cuisine - soy sauce and chili. The logo "Luna" was designed to highlight the connection to the moon, suggesting a sense of mystery, elegance, and a nighttime snacking experience.</p> 
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="Portfolio/Grapic Design/Mystery mockup.png" alt="Shirt mockup" style="width:884px; height:600px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="Portfolio/Grapic Design/Wasabi crisps mockup.png" alt="billboard top" style="width:884px; height:600px;">
     </div>
   </div>
 
+
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+</div> 
+</div>
+
+
+								<!-- OLDText-->
+
+     
+
+<h2>Story</h2>
+  <p><b>Naming:</b>The idea was to create crips with chinese flavours and as we all know the moon is an important concept in chinese culture- yin/yan, lunar new year, the full moon etc. Hence the name "luna" came to be.</p>
+
+  <p><b>Typography:</b>The font chosen  is "Le Havre Rounded". It was selected based on th look and how I want the customers to feel. The logo does not need a sleek typeface but an elegant one and the rounded, cursive look of the font conveys a sense of elegance and softnes(not too harsh or sharp) to make it feel inviting. </p>
+
+  <p><b>Color Palette:</b>The color palette differes for each flavour except for the black gradient it starts with. The colors used represent the main ingrediants used for the flavor.</p>
+
+
+  <script>
+  var slideIndex = 0;
+
+  // Call the containerCarousel function to start the slideshow
+  containerCarousel();
+
+  function containerCarousel() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(containerCarousel, 3000); // Change slide every 3 seconds
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dots");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+  window.onload = function() {
+    typeWriter();
+  };
+
+
+
+</script>
+
 </body>
 </html>
-
-
 

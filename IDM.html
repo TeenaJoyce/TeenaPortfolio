@@ -1,62 +1,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>IDM logo</title>
+<title>IDM</title>
 <link rel="stylesheet" href="css/Portfolio.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
 </head>
 <body>
 
-								<!-- Nav bar-->
+							<!-- Nav bar-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <div class="home">
+    <div class="container">
+     <div class="topnav">
+      <a href="Home.html">Home</a>
+      <a href="Other.html">Other works</a>
+     </div>
+    </div>
+    <div class="home-content">
+      <h1>Logo Design</h1>
+    </div>
+  </div>							<!-- IMG Carousal-->
 
-<div class="topnav">
-  <a href="Home.html">Portfolio</a>
-  <a href="Contact.html">Contact</a>
-  <a href="AboutMe.html">About</a>
- <a href="Resume.html">Resume</a>
-  <img src="Images/TJJ.png" alt="tjj logo" width="100" height="110" style="float:right"></a>
+<div class="content">
+  <img src="Portfolio/Grapic Design/IDM-logo-colour.png" alt="IDM Logo - Color" class="autoslide" >
+  <img src="Portfolio/Grapic Design/IDM-logo-BW.png" alt="IDM Logo - BW" class="autoslide">
+ <img src="Portfolio/Grapic Design/IDM brochure.png" alt="IDM Logo - BW" class="autoslide" >
+</div>
+
+<div class="typewriter-container">
+  <h1 id="typewrite"></h1>
+</div>
+
+<!-- Portfolio Gallery Slideshow -->
+
+<div class="container">
+  <div class="slides-container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="Portfolio/Grapic Design/Mug mockup.png" alt="bedroom top" style="width:884px; height:600px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="Portfolio/Grapic Design/Shirt mockup.png" alt="Shirt mockup" style="width:884px; height:600px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="Portfolio/Grapic Design/Web mockup.png" alt="billboard top" style="width:884px; height:600px;">
+    </div>
+  </div>
+
+
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+</div> 
 </div>
 
 
-								<!-- Text-->
+<div class="info">
+ <p>In collaboration with my team, we undertook the redesign of the logo for the Master's program in Trinity College Dublin - Interactive Digital Media. After a quick brainstorming session on different representations of the course and a survey on what the course means to other students, we decided that the IDM logo should represent themes of technology/coding. The final design is simple yet informative.</p>
 
-<h1>IDM Logo</h1>
-<h2>Software used: Adobe photoshop and Illustrator</h2>
-  <!-- Text and Images -->
-  <div class="content-wrapper">
-    <div class="image-container">
-      <img src="Portfolio/Grapic Design/IDM-logo-colour.png" alt="IDM Logo - Color" class="IDMimage">
-      <img src="Portfolio/Grapic Design/IDM-logo-BW.png" alt="IDM Logo - BW" class="IDMimage">
-    </div>
-    <div class="text-container">
-      <p>In collaboration with my team, we undertook the redesign of the logo for the Master's program in Trinity College Dublin - Interactive Digital Media. After a quick brainstorming session on different representations of the course and a survey on what the course means to other students, we decided that the IDM logo should represent themes of technology/coding. The final design is simple yet informative.</p>
-    </div>
-  </div>
+  <h2>Story</h2>
+  <p><b>Naming:</b>IDM VS Interactive digital media. Through the survey’s findings, we concluded that an alteration of the course name is unnecessary. If a name alteration were undertaken, it would increase the risk of misrepresenting the course, misaligning it with the target audience’s thoughts and ideas regarding the course and its content.</p>
+
+  <p><b>Concept:</b>We experimented with various concepts, colours and typefaces. After weeks of experimentation, we chose a concept based upon coding languages - such as HTML and Javascript. This concept successfully conveys the technological theme to audiences and looks visually interesting in doing so.</p>
+
+  <p><b>Typography:</b>The group experimented with monospaced fonts and we ultimately chose a monospaced font called ‘Share Tech Mono’. Monospaced fonts convey precision, order and technology. These ideas accurately represent a significant portion of the course, as these qualities are associated with computing and programming.</p>
+
+  <p><b>Color Palette:</b> We initially started with a solid green colour palette but abandoned this idea after concluding that it was too obvious. We experimented with various blues and eventually settled on the hex code #02B2E0.</p>
+
+</div>						
+
+<script>
+  var myIndex = 0;
+  var slideIndex = 0;
+
+  carousel();
+  containerCarousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("autoslide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) { myIndex = 1; }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+
+  function containerCarousel() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(containerCarousel, 3000); // Change slide every 2 seconds
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dots");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
 
 
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/Grapic Design/Mug mockup.png" alt="Mug mockup" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/Grapic Design/Shirt mockup.png" alt="Shirt mockup" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/Grapic Design/Web mockup.png" alt="Web mockup" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/Grapic Design/Poster mockup.png" alt="Poster mockup" style="width:100%">
-    </div>
-  </div>
 
-</div>
+
+  var i = 0;
+  var txt = 'IDM (Interactive Digital Media) Logo';
+  var speed = 50;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("typewrite").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  // Call the typeWriter function when the page loads
+  window.onload = function() {
+    typeWriter();
+  };
+
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+</script>
+
 
 </body>
 </html>

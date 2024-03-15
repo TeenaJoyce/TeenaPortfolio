@@ -1,100 +1,124 @@
-								
-body{
-background-color: black;
-background-image: linear-gradient(0deg, black, #003366);
-margin: 0; /* Remove default margin */
-padding: 0; /* Remove default padding */
-}
-
-.content-wrapper {
-      display: flex;
-      align-items: center;
-padding: 10;
-    }
-
-    .image-container {
-      flex: 0 0 auto;
-      margin-right: 20px; /* Adjust the margin between the images and text */
-    }
-
-    .IDMimage {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 10px; /* Adjust the margin between the images */
-    }
-
-   .text-container {
-      flex: 1 1 auto;
-      color: white;
-    }
-
-
-h1{
-margin:0;
-  font-family: 'Saira Semi Condensed','Lucida Console';
-    font-size: 30px;
-   font-weight: 1000;
-   color: white;
-   text-align: center;
-   font-weight: bold;
-  padding: 10px 0px;
-line-height:1.8;
-}
-
-h2 {
-margin:0;
-  font-family: 'Saira Semi Condensed','Lucida Console';
-    font-size:20px;
-   color: white;
-   text-align: center;
-   font-weight: bold;
-  padding: 5px 0px;
-}
-
-p {
-  font-family:'Lucida Console', 'Sans Serif';
-  font-size: 20px;
-   font-weight: 1000;
-   color: white;
-   text-align: center;
-   font-weight: bold;
-   line-height:1.8;
-  padding-right: 40px;
-  padding-left: 40px;
-text-indent: 2em;
-}
-
-p2{
-   font-family: 'Saira Semi Condensed','Lucida Console';
-   font-size: 25px;
-   font-weight: 1000;
-   color: white;
-   text-align: center;
-   font-weight: bold;
-text-indent: 2em;
-  
-}
-
-									<!-- Nav bar-->
-body {
+*,
+::before,
+::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
 }
 
+.topnav a,
+.home-content a {
+ text-decoration: none;
+}
+
+.home {
+  height: 100vh;
+  position: relative;
+}
+video {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.6);
+}
+.home-content {
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  color: #fff;
+  z-index: 3;
+}
+.home-content h1 {
+  font-family:"Nanum Pen Script", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 1.1;
+}
+.middle-line {
+  height: 90px;
+  width: 5px;
+  background: #fff;
+  margin: 40px auto;
+}
+.home-content button {
+  display: block;
+  font-size: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  background: transparent;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  margin: 50px auto 0;
+  padding: 16px 30px;
+  cursor: pointer;
+}
+
+
+
+h2{
+ font-family:"Ubuntu", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  line-height: 1.8;
+}
+
+p{
+ font-family:"Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+  z-index: 5;
+}
+
+
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #49ACAB;
+  color: white;
+}
+								/* The navbar */
 .topnav {
+  width: 200px;
+  float: left;
   overflow: hidden;
-  background-color: black;
+  background-color: #333;
 }
 
+/* Navbar links */
 .topnav a {
-  font-family:'Lucida Console', 'Sans Serif';
-  float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 44px 16px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size:20px;
+  font-size: 20px;
 }
 
 .topnav a:hover {
@@ -102,39 +126,24 @@ body {
   color: black;
 }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
 
 
-
-.me{
-  float: left;
-  border: 1px dotted black;
-  margin: 0px 0px 15px 20px;
-}
+						/* The grid */
 
 
-
-
-
-											<!-- Img Overlay -->
-
-body{
-margin: 0;
-}
 
 .grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
  margin-top: 50px;
-margin-left:100px;
+ margin-left:50px;
+margin-right:50px;
+
 }
 
 
         /* Container for the image and overlay */
-        .container {
+        .workcontainer {
             position: relative;
             display: inline-block;
         }
@@ -147,12 +156,12 @@ margin-left:100px;
         }
 
         /* Style for the overlay */
-        .overlay {
+        .textoverlay {
             position: absolute;
             top: 0;
             left: 0;
-            width: 260px;
-            height: 160px;
+            width: 100%;
+            height: 400px;
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white;
             text-align: center;
@@ -163,47 +172,100 @@ margin-left:100px;
         }
 
         /* Make the overlay visible on hover */
-        .container:hover .overlay {
+        .workcontainer:hover .textoverlay {
             opacity: 1;
         }
 
         /* Style for the overlay link */
-        .overlay a {
+        .textoverlay a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-
-
-										<!-- Contact form -->
-
-ul {
-  list-style-type: none;
-}
-
-ul li {
-    margin-bottom: 100px;
+p2{
+ font-family:"Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  line-height: 400px;
 }
 
 
+.main {
+  background-image: linear-gradient(0deg,#D0E2DF,#96BDB4, #49ACAB,#70D7E0);
+}
 
-.contact-list {
-    list-style: none;
-    padding: 0;
+.about-me {
+  display: flex;
+  flex-direction: column; /* Set flex-direction to column */
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: row-reverse; /* Set flex-direction to row for image and text */
+  align-items: flex-start; /* Align items to the start of the cross-axis */
+}
+
+.about-me-text {
+  flex: 1; /* Take remaining space */
+}
+
+.me {
+  width: 500px; /* Adjust the width of the image as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 20px; /* Use margin-left to create space between the image and text */
+}
+
+
+
+#Graphic-design{
+height: 900px;
+}
+
+										/* Footer */
+						
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D0E2DF;
+    height: 120px;
+}
+
+footer div {
+    flex: 1;
+}
+
+.left {
+    text-align: left;
+}
+
+.middle {
     text-align: center;
-  }
+}
 
-  .contact-list li {
-    margin: 35px 0; /* Adjust margin as needed */
-    text-align: center;
-  }
+.right {
+    text-align: right;
+}
 
-  .glyphicon {
-    display: block; /* Ensure each glyphicon is on a new line */
-    margin-bottom: 58px; /* Adjust margin as needed */
-  }
 
-  .contact-info {
-    color: white;
-    display: block;
-  }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #49ACAB;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}

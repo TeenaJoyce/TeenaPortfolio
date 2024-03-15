@@ -3,77 +3,125 @@
 <head>
 <title>Avengers assemble</title>
 <link rel="stylesheet" href="css/Portfolio.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Pen+Script&family=Ruda:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Nav bar-->
-<div class="topnav">
-  <a href="Home.html">Portfolio</a>
-  <a href="Contact.html">Contact</a>
-  <a href="AboutMe.html">About</a>
- <a href="Resume.html">Resume</a>
-  <img src="Images/TJJ.png" alt="tjj logo" width="100" height="110" style="float:right"></a>
-</div>
-
-
-
-
-<h1>Avengers Assemble</h1>
-<h2>Software used: 3ds Max</h2>
-  <div class="content-wrapper">
-    <div class="image-container">
-      <img src="Portfolio/3d modeling/Scene_front.jpg" alt="Avengers Scene" class="Avimage">
+<div class="home">
+  <div class="container">
+    <div class="topnav">
+      <a href="Home.html">Home</a>
+      <a href="Other.html">Other works</a>
     </div>
-    <div class="text-container">
-	<p> A meticulously designed 3D environment representing the Avengers' boardroom. Through the strategic placement of objects, each symbolizes a distinct Avenger, contributing to a visually engaging and dynamic representation of the superhero team's iconic headquarters. This project highlights my creative and design skills, offering a unique and immersive glimpse into the world of the Avengers.</p> 
-    </div>
-  </div>
-
-
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/Scene_side.jpg" alt="Avengers side look" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/objects-closup.jpg" alt="Avengers closup" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/Scene2.jpg" alt="Avengers side look" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/guantlet.jpg" alt="guantlet" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/hammer2.jpg" alt="hammer" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/shield2.jpg" alt="shield" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/star2.jpg" alt="star" style="width:100%">
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <img src="Portfolio/3d modeling/arrows2.jpg" alt="arrows" style="width:100%">
+    <div class="home-content">
+      <h1>AVENGERS ASSEMBLE</h1>
+      
     </div>
   </div>
 </div>
+
+								<!-- Text-->
+
+<div class="info">
+      <img src="Portfolio/3d modeling/Scene_front.jpg" alt="Avengers Scene" style="width:700px; height:500px;">
+      <img src="Portfolio/3d modeling/Scene_side.jpg" alt="Avengers side look" style="width:700px; height:500px;">
+      <p> Software used: 3DS Max </p>
+      <p>In a digital creation inspired by the Avengers, a 3D model of their meeting room comes to life. It's a sleek space filled with iconic objects representing each hero. Captain America's shield rests proudly in a glass case, while Thor's hammer rests in the center beconing anyone to try to lift it. Iron Man's suit stand on stand-buy, Hawkeyes quiver bag and black windows gauntlet are just chilling in the lounge area. All the obkect in the scene were created from 2d and 3d simple objects and were brough to life with bitmaps and materials </p>
+ <div style="text-align: center;">
+<img src="Portfolio/3d modeling/objects-closup.jpg" alt="Avengers closup"  style="width:700px; height:500px;">
+<img src="Portfolio/3d modeling/Scene2.jpg" alt="Avengers closup"  style="width:700px; height:500px;">
+</div>
+</div>
+
+							<!-- Portfolio Gallery Slideshow -->
+
+
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="Portfolio/3d modeling/guantlet.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="Portfolio/3d modeling/hammer2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="Portfolio/3d modeling/shield2.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="Portfolio/3d modeling/star2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="Portfolio/3d modeling/arrows2.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/guantlet.jpg" style="width:100%" onclick="currentSlide(1)" alt="Black widow guantlet">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/hammer2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Thor hammer">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/shield2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Captain shield">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/star2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Captain Mrvel star">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Portfolio/3d modeling/arrows2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Hawkeye arrows">
+    </div>    
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
 </html>
