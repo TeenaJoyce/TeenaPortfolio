@@ -1,144 +1,119 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Portfolio</title>
-<link rel="stylesheet" href="css/Home.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeenaHome</title>
+    <link rel="stylesheet" href="css/Home.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Pen+Script&family=Ruda:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  </head>
 <body>
 
-
-<h1>Teena Jesinth Joyce Benhur</h1>
-
-										<!-- Nav bar-->
-
-<div class="topnav">
-  <a href="Home.html">Portfolio</a>
-  <a href="Contact.html">Contact</a>
-  <a href="AboutMe.html">About</a>
- <a href="Resume.html">Resume</a>
-  <img src="Images/TJJ.png" alt="tjj logo" width="100" height="110" style="float:right"></a>
-</div>
+								 <!-- Nav bar-->
 
 
-
-
-  <!-- Text and Images -->
-  <div class="content-wrapper">
-    <div class="image-container">
-      <img src="Images/Me.jpg" alt="Me" class="IDMimage" style=width:500px;height:940px;>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <div class="home">
+    <div class="container">
+     <div class="topnav">
+      <a href="Home.html">Home</a>
+      <a href="Other.html">Other works</a>
+      <a href="#About-me">About</a>
+      <a href="#Contact">Contact</a>
+      
+     </div>
     </div>
-    <div class="text-container">
-<h1>Welcome to my portfolio page</h1>
-<h2> Digital Media Designer </h2>
-      <p>My skill set spans a wide range of multimedia disciplines,including graphic design, video editing, motion graphics, and interactive design, allowing me to create cohesive and impactful digital campaigns. Proficient in utilizing industry-standard design software, I seamlessly blend my technical expertise with a keen eye for aesthetics to produce visually striking graphics, animations, and multimedia content Scroll down below to check out my work.</p>
+    <video autoplay muted loop>
+      <source src="Images/Backvideo.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="home-content">
+      <h1>Hi welcome to my Portfolio Website</h1><br> 
+      <h1>My name is Teena Benhur and I am a <br<h1>
+      <h1 style="text-decoration: underline;">Digital Media Designer</h1>
+      <a href="#work">
+	<button class="button button2">Works</button>
+      </a>
     </div>
   </div>
 
+											<!-- About Me -->
+<div class="main">
+  <div id="About-me" class="about-me">
+    <h2>ABOUT ME</h2>
+    <div class="about-me-content">
+      <div class="about-me-text">
+        <p>Hi, a little bit about me:</p>
+        <p>My name is Teena Benhur and I am a recent graduate from Trinity college Dublin with a masters in Interactive Digital Media, with a background in Information Technology. I have experience in Digital Marketing managing Amazon campaigns. I consider myself as a creative person in many fields but am more passionate in graphic design. I am currently looking for a role to put my skills to the test and improve them for there is not end to design.</p>
+      </div>
+      <div class="about-me-image">
+        <img src="Images/Me.jpg" alt="Me" class="me">
+      </div>
+    </div>
+  </div>
+  <hr class="rounded">
+</div>
 
 
 
-
-										<!-- GRID-->
+									    <!-- GRID-->
 
 									<!-- Graphic Design-->
 
+<div id="Graphic-design">
+<h2 id="work">WORKS</h2>
 <div class="grid">
-      <div class="container">
+      <div class="workcontainer">
         <a href="IDM.html"> 
-            <img src="Images/IDM logo.png" alt="IDM logo" class="image"style="width:300px;height:200px;">
-            <div class="overlay"><p2>IDM LOGO</p2></div>
+            <img src="Images/IDM logo.png" alt="IDM logo" class="image"style="width:100%; height:400px;">
+            <div class="textoverlay"><p2>IDM LOGO</p2></div>
         </a>
     </div>
 
-<div class="container">
+<div class="workcontainer">
         <a href="Luna.html"> 
-             <img src="Portfolio/Grapic Design/Luna Mockup.jpg" alt="luna logo" style="width:300px;height:200px;">
-            <div class="overlay"><p2>LUNA CRISPS</p2></div>
+             <img src="Portfolio/Grapic Design/Soy crisp mockup.png" alt="luna logo" style="width:100%; height:400px;">
+            <div class="textoverlay"><p2>LUNA CRISPS</p2></div>
         </a>
     </div>
 
-<div class="container">
-        <a href="Typography.html"> 
-             <img src="Images/Dublin street art.png" alt="Dublin Street Art" style="width:300px;height:200px;">
-            <div class="overlay"><p2>TYPOGRAPHY</p2></div>
-        </a>
-    </div>
-</div>
-
-
-									<!-- 3D modeling-->
-<div class="grid">
-      <div class="container">
-        <a href="AvengersAssemble.html"> 
-            <img src="Images/Scene_front.jpg" alt="Avengers" style="width:300px;height:200px;">
-            <div class="overlay"><p2>AVENGERS ASSEMBLE</p2></div>
-        </a>
-    </div>
-<div class="container">
-        <a href="QueenMary.html"> 
-             <img src="Images/B340Top.jpg" alt="B340" style="width:300px;height:200px;">
-            <div class="overlay"><p2>B340</p2></div>
-        </a>
-    </div>
-<div class="container">
-        <a href="QueenMary2.html"> 
-             <img src="Images/ballroom front3.jpg" alt="BL_SW" style="width:300px;height:200px;">
-            <div class="overlay"><p2>BALLROOM AND SWIMMING POOL</p2></div>
-        </a>
-    </div>
-</div>
-
-
-									<!-- Media-->
-
-
-
-<div class="grid">
-
-      <div class="container">
-        <a href="RaceHome.html"> 
-            <img src="Images/Race home.png" alt="Race home" style="width:300px;height:200px;">
-            <div class="overlay"><p2>RACE HOME</p2></div>
-        </a>
-    </div>
-<div class="container">
-        <a href="SpiritAnimal.html"> 
-             <img src="Images/Spirit Animal.png" alt="Spirit Animal" style="width:300px;height:200px;">
-            <div class="overlay"><p2>SPIRIT ANIMAL</p2></div>
-        </a>
-    </div>
-<div class="container">
-        <a href="Rumble.html"> 
-             <img src="Images/jungle.jpeg" alt="Rumble in the jungle" style="width:300px;height:200px;">
-            <div class="overlay"><p2>RUMBLE IN THE JUNGLE</p2></div>
-        </a>
-    </div>
-</div>
-
-
-<div class="grid">
-      <div class="container">
-        <a href="JediTrials.html"> 
-            <img src="Images/Rebels.png" alt="Jedi Trials" style="width:300px;height:200px;">
-            <div class="overlay"><p2>JEDI TRIALS</p2></div>
-        </a>
-    </div>
-<div class="container">
-        <a href="Orchid.html"> 
-             <img src="Images/Orchid.png" alt="Orchid logo" style="width:300px;height:200px;">
-            <div class="overlay"><p2>ORCHID PERFUME</p2></div>
-        </a>
-    </div>
-<div class="container">
-        <a href="DSA.html"> 
-             <img src="Images/DSA.png" alt="Dublin street art" style="width:300px;height:200px;">
-             <div class="overlay"><p2>DUBLIN STREET ART</p2></div>
-        </a>
-    </div>
 </div>
 </div>
+<hr class= "rounded">
+<footer id="Contact">
+    <div class="left">
+        <p>Phone Number:<br>+353 830 484203</p>
+    </div>
+    <div class="middle">
+        <p>Address:<br> Dublin Ireland, D11P920</p>
+    </div>
+    <div class="right">
+        <p>Email:<br><a href="mailto:teena.benhur@gmail.com">teena.benhur@gmail.com</a></p>
+    </div>
+</footer>
+</div>
 
+<script>
+let mybutton = document.getElementById("myBtn");
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 
 </body>
