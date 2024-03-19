@@ -26,7 +26,10 @@
 <!-- Text and Images -->
 <div class="content-wrapper">
  <div style="text-align:center">
-  <img src="Portfolio/Grapic Design/Orchid.png" alt="Luna logo" style="width:800px; height:300px;">
+  <img src="Portfolio/Grapic Design/Orchid.png" alt="Orchid logo" style="width:700px; height:300px;">
+ <img src="Portfolio/Grapic Design/Orchid Social media post.png" alt="Orchid Social media post" style="width:500px; height:500px;">
+
+
 </div>
   <div class="text-container">
    <p>Software used: Adobe Illustrator and Canva</p>
@@ -36,22 +39,97 @@
 </div>
 
 
+<!-- Carousal Slideshow -->
+
+<div class="container">
+  <div class="slides-container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="Portfolio/Grapic Design/Winter sale.png" alt="bedroom top" style="width:700px; height:600px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="Portfolio/Grapic Design/Auro collection.png" alt="Shirt mockup" style="width:700px; height:600px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="Portfolio/Grapic Design/Auro collection (2).png" alt="billboard top" style="width:700px; height:600px;">
+    </div>
+  <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="Portfolio/Grapic Design/Blossom collection.png" alt="billboard top" style="width:700px; height:600px;">
+    </div>
+  </div>
+
+
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+  <span class="dots" onclick="currentSlide(4)"></span>
+
+</div> 
+</div>
 
 <!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <h2>Instagram post</h2>
-      <center><img src="Portfolio/Grapic Design/Orchid Social media post.png" alt="Orchid Social media post" style="width:80%"></center>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <h2>Business card</h2>
-      <center><img src="Portfolio/Grapic Design/Orchid business card.png" alt="Orchid business card" style="width:90%"></center>
-    </div>
-  </div>
-</div>
+
+  <center><img src="Portfolio/Grapic Design/Orchid Insta.png" alt="Orchid Insta" style="width: 45%;"></center>
+
+
+
+
+
+
+
+
+
+<script>
+  var slideIndex = 0;
+
+  // Call the containerCarousel function to start the slideshow
+  containerCarousel();
+
+  function containerCarousel() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(containerCarousel, 3000); // Change slide every 3 seconds
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dots");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+  window.onload = function() {
+    typeWriter();
+  };
+
+
+
+</script>
+
 
 </body>
 </html>
