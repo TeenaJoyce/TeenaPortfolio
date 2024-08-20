@@ -158,8 +158,8 @@ p{
  .workcontainer img {
     width: 100%; /* Make sure the image takes the full width of the container */
     height: auto; 
-    max-width: 400px; 
-    max-height: 300px; 
+    width: 400px; 
+    height: 300px; 
 }
 
         /* Style for the overlay */
