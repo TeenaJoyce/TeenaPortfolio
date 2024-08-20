@@ -1,3 +1,12 @@
+@media (max-width: 768px) {
+    /* Styles for tablets and small devices */
+}
+
+@media (max-width: 480px) {
+    /* Styles for mobile devices */
+}
+
+
 *,
 ::before,
 ::after {
@@ -15,6 +24,7 @@
   height: 100vh;
   position: relative;
 }
+
 video {
   object-fit: cover;
   position: absolute;
@@ -23,7 +33,6 @@ video {
   position: absolute;
   z-index: 1;
 }
-
 
 .overlay {
   position: absolute;
@@ -34,6 +43,7 @@ video {
   z-index: 2;
   background: rgba(0,0,0,0.6);
 }
+
 .home-content {
   margin: 0 auto;
   position: relative;
@@ -41,6 +51,7 @@ video {
   color: #fff;
   z-index: 3;
 }
+
 .home-content h1 {
   font-family:"Nanum Pen Script", cursive;
   text-align: center;
@@ -48,12 +59,14 @@ video {
   font-size: 50px;
   line-height: 1.1;
 }
+
 .middle-line {
   height: 90px;
   width: 5px;
   background: #fff;
   margin: 40px auto;
 }
+
 .home-content button {
   display: block;
   font-size: 20px;
@@ -68,8 +81,6 @@ video {
   cursor: pointer;
 }
 
-
-
 h2{
  font-family:"Ubuntu", sans-serif;
   text-align: center;
@@ -82,8 +93,10 @@ p{
  font-family:"Ubuntu", sans-serif;
   text-align: center;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: 1.9;
+  padding: 50px;
 }
+
 
 /* Position the navbar container inside the image */
 .container {
@@ -92,8 +105,6 @@ p{
   width: auto;
   z-index: 5;
 }
-
-
 
 .button2 {
   background-color: white; 
@@ -133,6 +144,7 @@ p{
 						/* The grid */
 
 
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
@@ -151,19 +163,19 @@ p{
             display: inline-block;
         }
 
-        /* Style for the image */
-        .image {
-            display: block;
-            width: 100%; /* Make sure the image takes the full width of the container */
-            height: auto; /* Maintain aspect ratio */
-        }
+ .workcontainer img {
+    width: 100%; /* Make sure the image takes the full width of the container */
+    height: auto; 
+    max-width: 400px; 
+    max-height: 300px; 
+}
 
         /* Style for the overlay */
         .textoverlay {
             position: absolute;
             top: 0;
             left: 0;
-            width: 400px;;
+            width: 400px;
             height: 300px;
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white;
@@ -187,9 +199,8 @@ p{
         }
 p2{
  font-family:"Ubuntu", sans-serif;
-  text-align: center;
-  font-size: 50px;
-  line-height: 400px;
+  font-size: 40px;
+  line-height: 5.1;
 }
 
 
@@ -208,9 +219,6 @@ p2{
   align-items: flex-start; /* Align items to the start of the cross-axis */
 }
 
-.about-me-text {
-  flex: 1; /* Take remaining space */
-}
 
 .me {
   width: 500px; /* Adjust the width of the image as needed */
@@ -218,6 +226,9 @@ p2{
   margin-left: 20px; /* Use margin-left to create space between the image and text */
 }
 
+.about-me-text {
+  text-align: center;
+}
 
 
 #Graphic-design{
@@ -229,7 +240,6 @@ height: 900px;
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: #D0E2DF;
     height: 120px;
 }
 
@@ -272,3 +282,115 @@ hr.rounded {
   border-top: 8px solid #bbb;
   border-radius: 5px;
 }
+
+
+									/* Diff Devices */
+
+@media (max-width: 768px) {
+    /* Adjust grid layout for tablets */
+    .grid {
+        grid-template-columns: 1fr; /* One column */
+        margin-left: 20px;
+        margin-right: 20px;
+ 	margin-botton: 50px;
+    }
+
+    .home-content h1 {
+        font-size: 35px; /* Smaller heading size */
+    }
+
+    .home-content button {
+        font-size: 16px; /* Smaller button text */
+        padding: 12px 24px; /* Adjust padding */
+    }
+
+    .topnav {
+        width: 100%;
+        float: none;
+    }
+
+    .me {
+        width: 100%; /* Full width for the image */
+        margin-left: 0;
+        margin-top: 20px; /* Add space between image and text */
+    }
+
+    .about-me-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center;
+    }
+
+    p {
+        padding: 20px; /* Less padding for smaller screens */
+        font-size: 18px;
+    }
+
+footer {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    footer div {
+        margin-bottom: 15px;
+    }
+
+    .left, .middle, .right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for mobile devices */
+    .grid {
+        grid-template-columns: 1fr; /* One column */	
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+ .workcontainer img {
+    width: 100%; /* Make sure the image takes the full width of the container */
+    height: auto; 
+    max-width: 200px; 
+    max-height: 100px; 
+}
+
+    .home-content h1 {
+        font-size: 28px; /* Even smaller heading */
+    }
+
+    .home-content button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    h2 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    p {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+
+        /* Style for the overlay */
+        .textoverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease;
+            z-index: 1; /* Set a higher z-index */
+        }
+}
+
+
+
