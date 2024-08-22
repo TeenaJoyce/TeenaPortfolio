@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Pen+Script&family=Ruda:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 <body>
 
@@ -18,31 +19,43 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <div class="home">
-    <div class="container">
-     <div class="topnav">
-      <a href="Home.html">Home</a>
-      <a href="Other.html">Other works</a>
-      <a href="#About-me">About</a>
-      <a href="#Contact">Contact</a>
-      
-     </div>
-    </div>
+    <!-- HTML -->
+<div class="container">
+    <!-- Hamburger Icon -->
+    <button class="hamburger" id="hamburger-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
 
-	 <video autoplay muted loop>
+    <!-- Navbar Links -->
+    <div class="topnav" id="navbar">
+        <a href="Home.html">Home</a>
+        <a href="Other.html">Other works</a>
+        <a href="#About-me">About</a>
+        <a href="#Contact">Contact</a>
+    </div>
+</div>
+
+
+
+    <video autoplay muted loop>
       <source src="https://github.com/TeenaJoyce/TeenaPortfolio/raw/main/Images/Backvideo.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div>
-    <div class="home-content">
-      <h1>Hi welcome to my Portfolio Website</h1><br> 
-      <h1>My name is Teena Benhur and I am a <br><h1>
-      <h1 style="text-decoration: underline;">Digital Media Designer</h1>
-      <a href="#work">
-	<button class="button button2">Works</button>
-      </a>
-    </div>
-  </div>
+	<div class="home-content">
+  		<h1>Hi welcome to my Portfolio Website</h1><br> 
+  		<h1>My name is Teena Benhur and I am a <br><h1>
+  		<h1 style="text-decoration: underline;">Digital Media Designer</h1>
+  	<a href="#work">
+    		<button class="button button2">Works</button>
+  	</a>
+   </div>
+ </div>
 
-											<!-- About Me -->
+
+
+<div class="gradient-background">										<!-- About Me -->
 <div class="main">
   <div id="About-me" class="about-me">
     <h2>ABOUT ME</h2>
@@ -57,7 +70,7 @@
     </div>
   </div>
   <hr class="rounded">
-</div>
+
 
 
 
@@ -99,7 +112,7 @@
 </div>
 
 
-
+</div>
 <hr class= "rounded">
 <footer id="Contact">
     <div class="left">
@@ -112,7 +125,7 @@
         <p>Email:<br><a href="mailto:teena.benhur@gmail.com">teena.benhur@gmail.com</a></p>
     </div>
 </footer>
-</div>
+
 
 <script>
 let mybutton = document.getElementById("myBtn");
@@ -130,6 +143,15 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+document.getElementById('hamburger-btn').addEventListener('click', function() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const navbar = document.getElementById('navbar');
+
+  hamburgerBtn.classList.toggle('active'); // Toggle the 'active' class
+  navbar.classList.toggle('active'); // Toggle the 'active' class on the navbar
+});
+
 </script>
 
 
