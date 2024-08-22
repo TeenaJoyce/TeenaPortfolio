@@ -1,4 +1,3 @@
-
 *,
 ::before,
 ::after {
@@ -9,7 +8,7 @@
 
 .topnav a,
 .home-content a {
- text-decoration: none;
+  text-decoration: none;
 }
 
 .home {
@@ -19,7 +18,6 @@
 
 video {
   object-fit: cover;
-  position: absolute;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -33,7 +31,7 @@ video {
   bottom: 0;
   right: 0;
   z-index: 2;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .home-content {
@@ -45,7 +43,7 @@ video {
 }
 
 .home-content h1 {
-  font-family:"Nanum Pen Script", cursive;
+  font-family: "Nanum Pen Script", cursive;
   text-align: center;
   text-transform: uppercase;
   font-size: 50px;
@@ -59,36 +57,21 @@ video {
   margin: 40px auto;
 }
 
-.home-content button {
-  display: block;
-  font-size: 20px;
-  border: 1px solid #f1f1f1;
-  border-radius: 5px;
-  background: transparent;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  margin: 50px auto 0;
-  padding: 16px 30px;
-  cursor: pointer;
-}
-
-h2{
- font-family:"Ubuntu", sans-serif;
+h2 {
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-size: 70px;
   line-height: 1.8;
 }
 
-p{
- font-family:"Ubuntu", sans-serif;
+p {
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
   font-size: 30px;
   line-height: 1.9;
   padding: 50px;
 }
-
 
 /* Position the navbar container inside the image */
 .container {
@@ -98,9 +81,26 @@ p{
   z-index: 5;
 }
 
+.button {
+  display: block;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin: 50px auto 0;
+  padding: 16px 30px;
+  cursor: pointer;
+}
+
+.home-content .button {
+  border: 1px solid #f1f1f1;
+  background: transparent;
+  color: #fff;
+}
+
 .button2 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #008CBA;
 }
 
@@ -108,22 +108,24 @@ p{
   background-color: #49ACAB;
   color: white;
 }
-								/* The navbar */
+
+/* Base Navbar */
 .topnav {
-  width: 200px;
-  float: left;
-  overflow: hidden;
+  width: 200px; /* Adjusted for desktop view */
   background-color: #333;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px 0;
 }
 
-/* Navbar links */
 .topnav a {
-  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px 16px;
   text-decoration: none;
   font-size: 20px;
+  display: block;
 }
 
 .topnav a:hover {
@@ -131,127 +133,149 @@ p{
   color: black;
 }
 
+.hamburger {
+  display: none; /* Hidden by default */
+  justify-content: flex-start;;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 6; /* Ensure it is above other elements */
+  margin-left: auto;
+  margin-right: 20px;
+}
 
+/* Hamburger menu lines */
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #fff; /* White color to make it visible */
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
 
-						/* The grid */
+/* Show Navbar Items when Hamburger is Clicked */
+.topnav.active {
+  display: block; /* Display the navbar when active */
+}
 
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg);
+}
 
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
 
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* The grid */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-template-rows: repeat(2, 1fr); /* Three rows */
-    grid-gap: 10px; /* Gap between grid items */
-    margin-top: 10px;
-    margin-left: 200px;
-    margin-right: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 50px;
 }
 
-
-
-        /* Container for the image and overlay */
-        .workcontainer {
-            position: relative;
-            display: inline-block;
-        }
-
- .workcontainer img {
-    width: 100%; /* Make sure the image takes the full width of the container */
-    height: auto; 
-    width: 400px; 
-    height: 300px; 
+.workcontainer {
+  position: relative;
+  display: inline-block;
 }
 
-        /* Style for the overlay */
-        .textoverlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 400px;
-            height: 300px;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-            color: white;
-            text-align: center;
-            padding: 20px;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s ease;
-            z-index: 1; /* Set a higher z-index */
-        }
+.workcontainer img {
+  width: 400px;
+  height: 300px;
+}
 
-        /* Make the overlay visible on hover */
-        .workcontainer:hover .textoverlay {
-            opacity: 1;
-        }
+.textoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
 
-        /* Style for the overlay link */
-        .textoverlay a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-p2{
- font-family:"Ubuntu", sans-serif;
+.workcontainer:hover .textoverlay {
+  opacity: 1;
+}
+
+.textoverlay a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p2 {
+  font-family: "Ubuntu", sans-serif;
   font-size: 40px;
   line-height: 5.1;
 }
 
-
 .main {
-  background-image: linear-gradient(0deg,#D0E2DF,#96BDB4, #49ACAB,#70D7E0);
+  background-image: linear-gradient(0deg, #d0e2df, #96bdb4, #49acab, #70d7e0);
 }
 
 .about-me {
   display: flex;
-  flex-direction: column; /* Set flex-direction to column */
+  flex-direction: column;
 }
 
 .about-me-content {
   display: flex;
-  flex-direction: row-reverse; /* Set flex-direction to row for image and text */
-  align-items: flex-start; /* Align items to the start of the cross-axis */
+  flex-direction: row-reverse;
+  align-items: flex-start;
 }
 
-
 .me {
-  width: 500px; /* Adjust the width of the image as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-left: 20px; /* Use margin-left to create space between the image and text */
+  width: 500px;
+  height: auto;
+  margin-left: 20px;
 }
 
 .about-me-text {
   text-align: center;
 }
 
-
-#Graphic-design{
-height: 900px;
+#Graphic-design {
+  height: 900px;
 }
 
-										/* Footer */
-						
+									/* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    height: 120px;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
 }
 
 footer div {
-    flex: 1;
+  flex: 1;
 }
 
 .left {
-    text-align: left;
+  text-align: left;
 }
 
 .middle {
-    text-align: center;
+  text-align: center;
 }
 
 .right {
-    text-align: right;
+  text-align: right;
 }
-
-
 
 #myBtn {
   display: none;
@@ -262,127 +286,165 @@ footer div {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #49ACAB;
+  background-color: #49acab;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 
-
 hr.rounded {
-  border-top: 8px solid #bbb;
+  border-top: 10px solid #bbb;
   border-radius: 5px;
 }
 
-
-									/* Diff Devices */
-
+								/* Tablet */
 @media (max-width: 768px) {
-    /* Adjust grid layout for tablets */
-    .grid {
-        grid-template-columns: 1fr; /* One column */
-        margin-left: 20px;
-        margin-right: 20px;
- 	margin-botton: 50px;
-    }
+  .grid {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
 
-    .home-content h1 {
-        font-size: 35px; /* Smaller heading size */
-    }
+  .workcontainer img {
+    width: 250px;
+    height: 150px;
+  }
 
-    .home-content button {
-        font-size: 16px; /* Smaller button text */
-        padding: 12px 24px; /* Adjust padding */
-    }
+  .textoverlay {
+    width: 250px;
+    height: 150px;
+  }
 
-    .topnav {
-        width: 100%;
-        float: none;
-    }
+  p2 {
+    font-size: 20px;
+  }
 
-    .me {
-        width: 100%; /* Full width for the image */
-        margin-left: 0;
-        margin-top: 20px; /* Add space between image and text */
-    }
+  .home-content h1 {
+    font-size: 35px;
+  }
 
-    .about-me-content {
-        flex-direction: column; /* Stack text and image vertically */
-        align-items: center;
-    }
+  .home-content button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
 
-    p {
-        padding: 20px; /* Less padding for smaller screens */
-        font-size: 18px;
-    }
+  .me {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .topnav {
+    width: 100%;
+    float: left;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-around;
+    padding: 10px 0;
+    min-height: 60px;
+  }
+
+  .topnav a {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  footer {
+    flex-direction: row;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  footer div {
+    margin-bottom: 15px;
+  }
+
+  .left,
+  .middle,
+  .right {
+    text-align: center;
+  }
+}
+
+								/* Mobile */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .workcontainer img {
+    width: 200px;
+    height: 100px;
+  }
+
+  .textoverlay {
+    width: 200px;
+    height: 100px;
+  }
+
+  p2 {
+    font-size: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 28px;
+  }
+
+.home-content{
+   top: 210px;
+}
+
+
+  .home-content button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  p {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+.hamburger {
+    display: flex; /* Display the hamburger button on mobile screens */
+  }
+
+
+  .topnav {
+    display: none; /* Hide the navbar by default */
+  }
+
+  .topnav.active {
+    display: flex; /* Show the navbar when active */
+    flex-direction: column;
+    width: 100%;
+  }
 
 footer {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 20px;
-    }
-
-    footer div {
-        margin-bottom: 15px;
-    }
-
-    .left, .middle, .right {
-        text-align: center;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  font-size: 5px;
     }
 }
-
-@media (max-width: 480px) {
-    /* Further adjustments for mobile devices */
-    .grid {
-        grid-template-columns: 1fr; /* One column */	
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
- .workcontainer img {
-    width: 100%; /* Make sure the image takes the full width of the container */
-    height: auto; 
-    max-width: 200px; 
-    max-height: 100px; 
-}
-
-    .home-content h1 {
-        font-size: 28px; /* Even smaller heading */
-    }
-
-    .home-content button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    h2 {
-        font-size: 50px; /* Reduce heading size */
-    }
-
-    p {
-        padding: 15px;
-        font-size: 16px;
-    }
-
-
-        /* Style for the overlay */
-        .textoverlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 400px;
-            height: 300px;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-            color: white;
-            text-align: center;
-            padding: 20px;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s ease;
-            z-index: 1; /* Set a higher z-index */
-        }
-}
-
-
-
