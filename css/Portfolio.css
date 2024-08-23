@@ -498,6 +498,7 @@ footer div {
 
 
 								/* Mobile */
+								/* Other Mobile */
 /* Mobile */
 @media (max-width: 480px) {
 
@@ -509,24 +510,24 @@ footer div {
   .home-content h1 {
     font-family: "Nanum Pen Script", cursive;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.1;
-    margin-bottom: -500px;
+    margin-bottom: 100px;
   }
 
   .home-content {
-    margin: 0 auto;
-    position: relative;
-    top: -200px;
-    left: 200px;
     text-align: center;
     color: #fff;
     z-index: 3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 
   h2 {
     font-family: "Ubuntu", sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 80px;
   }
 
@@ -546,9 +547,11 @@ footer div {
 
   .container img {
     position: relative;
-    display: inline-block;
-    width: 250px; /* Set your desired width */
-    height: 150px; /* Set your desired height */
+    display: block;
+    width: 100px; /* Set your desired width */
+    height: 100px; /* Set your desired height */
+    margin-left: auto;
+    margin-right: auto;
     object-fit: cover; /* Ensure the image covers the entire area without distortion */
   }
 
@@ -556,8 +559,50 @@ footer div {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for mobile */
     grid-gap: 10px; /* Space between the grid items */
-    margin-top: -20px;
-    margin-left: -15px;
-    margin-right: -50px;
+    margin-top: 20px;
   }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%; /* Ensure the footer takes up the full width of the viewport */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    overflow: hidden;   
 }
+
+footer p {
+font-size: 9px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+  p2 {
+    font-size: 15px;
+  }
+
+/* Base Navbar */
+.topnav {
+  width: 200px;
+  float: left;
+  position: relative;
+  background-color: #333;
+  left: 31.2%; 
+  top: -59%; 
+}
+
+
