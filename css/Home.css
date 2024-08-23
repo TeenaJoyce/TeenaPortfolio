@@ -389,16 +389,6 @@ hr.rounded {
     margin-right: 10px;
   }
 
-  .workcontainer img {
-    width: 200px;
-    height: 100px;
-  }
-
-  .textoverlay {
-    width: 200px;
-    height: 100px;
-  }
-
   p2 {
     font-size: 15px;
   }
@@ -442,9 +432,45 @@ hr.rounded {
   }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  height: 120px;
-  font-size: 5px;
-    }
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%; /* Ensure the footer takes up the full width of the viewport */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    overflow: hidden;
+    
+}
+
+footer p
+{
+font-size: 9px;
+}
+
+
+#Graphic-design {
+  height: 600px;
+}
+
+.workcontainer img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100px;
+}
+
+.textoverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
