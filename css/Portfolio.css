@@ -77,12 +77,12 @@ margin-top: 200px;
 
 									/* navigation bar */
 
+
 /* Base Navbar */
 .topnav {
   width: 200px;
   float: left;
-position: relative;
-  overflow: hidden;
+  position: relative;
   background-color: #333;
   left: -31.2%; 
   top: -59%; 
@@ -112,9 +112,10 @@ position: relative;
   border: none;
   cursor: pointer;
   z-index: 6; /* Ensure it is above other elements */
-  margin-left: auto;
-  margin-right: 20px;
+  left: -31.2%; 
+  top: -59%; 
 }
+
 
 /* Hamburger menu lines */
 .hamburger div {
@@ -131,7 +132,7 @@ position: relative;
 }
 
 .hamburger.active div:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-7px);
 }
 
 .hamburger.active div:nth-child(2) {
@@ -139,9 +140,8 @@ position: relative;
 }
 
 .hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(-7px);
 }
-
 
 #myBtn {
   display: none;
@@ -587,14 +587,39 @@ font-size: 9px;
     font-size: 15px;
   }
 
+
 /* Base Navbar */
 .topnav {
-  width: 200px;
+  width: 55px;
   float: left;
   position: relative;
   background-color: #333;
-  left: 31.2%; 
+  left: -31.2%; 
   top: -59%; 
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 6px;
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+}
+
+  .hamburger {
+    display: flex; /* Display the hamburger button on mobile screens */
+  }
+
+  .topnav {
+    display: none; /* Hide the navbar by default */
+  }
+
+  .topnav.active {
+    display: flex; /* Show the navbar when active */
+    flex-direction: column;
+    
+  }
 }
 
 
