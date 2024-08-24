@@ -190,10 +190,6 @@ position: relative;
   margin-left: 50px;
   margin-right: 50px;
 }
-
-
-
-
         /* Container for the image and overlay */
         .container img {
             position: relative;
@@ -220,7 +216,6 @@ position: relative;
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white;
             text-align: center;
-            
             padding: 20px;
             opacity: 0; /* Initially hidden */
             transition: opacity 0.3s ease;
@@ -288,7 +283,6 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
-  position: relative;
  margin-top:35px;
  left: 20%;
  right: 10%;
@@ -496,10 +490,8 @@ footer div {
 }
 
 
-
-								/* Mobile */
 								/* Other Mobile */
-/* Mobile */
+
 @media (max-width: 480px) {
 
   /* Center all h tags on mobile */
