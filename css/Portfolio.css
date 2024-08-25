@@ -93,7 +93,7 @@ margin-top: 200px;
   position: relative;
   background-color: #333;
   margin-left: -280px; 
-  margin-top: -150px;; 
+  margin-top: -150px; 
 }
 
 .topnav a {
@@ -120,7 +120,7 @@ margin-top: 200px;
   border: none;
   cursor: pointer;
   z-index: 6; /* Ensure it is above other elements */
-  left: -25%; 
+  left: -20%; 
   top: 19%; 
 }
 
@@ -579,26 +579,18 @@ font-size: 9px;
   }
 
 
-/* Base Navbar */
+ /* Navbar */
+
 .topnav {
-  width: 55px;
+  width: 50px;
   float: left;
   position: relative;
   background-color: #333;
-  left: -31.2%; 
-  top: -59%; 
+  margin-left: -50px; 
+  margin-top: 10px; 
 }
 
-.topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 6px;
-  text-decoration: none;
-  font-size: 13px;
-  display: block;
-}
-
-  .hamburger {
+.hamburger {
     display: flex; /* Display the hamburger button on mobile screens */
   }
 
@@ -607,8 +599,20 @@ font-size: 9px;
   }
 
   .topnav.active {
-    display: flex; /* Show the navbar when active */
+    display: flex; 
     flex-direction: column;
-    
+    position: absolute; 
+    top: 0;     
+    left: 0; 
+    background-color: black;
   }
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 6px;
+  text-decoration: none;
+  font-size: 10px;
+  display: block;
+}
 }
