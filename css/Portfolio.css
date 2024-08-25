@@ -482,7 +482,9 @@ footer div {
 }
 
 
-				/* Mobile */
+
+								/* Other Mobile */
+/* Mobile */
 @media (max-width: 480px) {
 
   /* Center all h tags on mobile */
@@ -610,4 +612,3 @@ font-size: 9px;
     height:300px;
 }
 }
-
